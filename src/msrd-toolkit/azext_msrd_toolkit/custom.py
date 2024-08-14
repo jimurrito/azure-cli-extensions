@@ -4,17 +4,19 @@
 # --------------------------------------------------------------------------------------------
 
 from knack.util import CLIError
+from azure.cli.command_modules.vm.custom import get_vm
 
+def run_msrd_toolkit(cmd, resource_group, vm_name):
+    # debug print
+    print(cmd, resource_group, vm_name)
+    target_vm = get_vm(cmd, resource_group, vm_name)
+    # 
+    
+    #raise CLIError('TODO: Implement `msrd_toolkit create`')
 
-def create_msrd-toolkit(cmd, resource_group_name, msrd-toolkit_name, location=None, tags=None):
-    raise CLIError('TODO: Implement `msrd-toolkit create`')
-
-
-def list_msrd-toolkit(cmd, resource_group_name=None):
-    raise CLIError('TODO: Implement `msrd-toolkit list`')
-
-
-def update_msrd-toolkit(cmd, instance, tags=None):
+'''
+ def update_msrd_toolkit(cmd, instance, tags=None):
     with cmd.update_context(instance) as c:
         c.set_param('tags', tags)
     return instance
+'''

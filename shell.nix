@@ -22,6 +22,7 @@ pkgs.mkShell {
       python -m venv env --copies
       source ./env/bin/activate
       python3 -m pip install -U pip
+      pip install az-cli
       pip install azdev
     else
       source ./env/bin/activate
